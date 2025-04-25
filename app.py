@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyNHZ2IHl4WfK5NZnz8/r+vQ",
+      "authorship_tag": "ABX9TyNzAfw8dOJ5n1UP82DLfVhU",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -39,7 +39,7 @@
         "id": "jNbZaBE95rpx",
         "outputId": "9961744f-b09b-4d99-8ae3-e96284486a51"
       },
-      "execution_count": null,
+      "execution_count": 2,
       "outputs": [
         {
           "output_type": "stream",
@@ -111,7 +111,7 @@
         "id": "dGAZ1HSC5xC_",
         "outputId": "12c62047-8d85-46f2-937a-f5384925ab01"
       },
-      "execution_count": null,
+      "execution_count": 4,
       "outputs": [
         {
           "output_type": "stream",
@@ -125,7 +125,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 6,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
@@ -300,12 +300,10 @@
         }
       ],
       "source": [
-        "# Passo 2: Importar as bibliotecas necessárias\n",
         "import os\n",
         "import sqlite3\n",
         "import streamlit as st\n",
         "from datetime import date\n",
-        "from pyngrok import ngrok\n",
         "\n",
         "# Apagar o banco de dados existente (se for seguro fazer isso)\n",
         "if os.path.exists('frota.db'):\n",
@@ -432,14 +430,7 @@
         "\n",
         "# Alertas\n",
         "verificar_manutencao()\n",
-        "calcular_custo_por_km()\n",
-        "\n",
-        "# Passo 4: Rodar o ngrok para gerar o link público\n",
-        "public_url = ngrok.connect(8501)\n",
-        "print(f\"Link público do Streamlit: {public_url}\")\n",
-        "\n",
-        "# Rodar o Streamlit\n",
-        "!streamlit run app.py &"
+        "calcular_custo_por_km()\n"
       ]
     }
   ]
