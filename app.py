@@ -31,7 +31,7 @@
         "!pip install streamlit\n"
       ],
       "metadata": {
-        "collapsed": true,
+        "collapsed": True,
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
@@ -103,7 +103,7 @@
         "!pip install pyngrok"
       ],
       "metadata": {
-        "collapsed": true,
+        "collapsed": True,
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
