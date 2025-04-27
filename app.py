@@ -1,3 +1,28 @@
+import sqlite3
+import os
+
+# Função para criar o banco e tabelas se não existirem
+def inicializar_banco():
+    conn = sqlite3.connect('frota.db')
+    c = conn.cursor()
+    # Aqui você cria as tabelas que o seu app usa
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS veículos (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            modelo TEXT,
+            placa TEXT,
+            ano INTEGER
+        )
+    ''')
+    # Adicione aqui outras tabelas se precisar
+    conn.commit()
+    conn.close()
+
+# Chama a função para garantir que o banco exista
+if not os.path.exists('frota.db'):
+    inicializar_banco()
+
+
 {
   "nbformat": 4,
   "nbformat_minor": 0,
